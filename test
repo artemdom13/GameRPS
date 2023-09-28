@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Test {
+
+    public static void main(String[] args) {
+        Scanner sn = new Scanner(System.in);
+        String p = "paper";
+        String r = "rock";
+        String s = "scissors";
+
+        while(true) {
+            System.out.print("Player: ");
+            String player = sn.nextLine();
+            System.out.print("Computer: ");
+            double random = Math.random();
+            if(random>0 && random<=0.3) {
+                System.out.print(p);
+                if(player.equals("paper")) {
+                    System.out.println("Game drow\n");
+                }
+            } else if(random>0.3 && random<=0.6) {
+                System.out.println(r);
+            } else {
+                System.out.println(s);
+            }
+            if(player.equals("exit")) {
+                break;
+            }
+        }
+    }
+}
