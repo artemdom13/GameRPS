@@ -14,14 +14,26 @@ public class Test {
             System.out.print("Computer: ");
             double random = Math.random();
             if(random>0 && random<=0.3) {
-                System.out.print(p);
-                if(player.equals("paper")) {
-                    System.out.println("Game drow\n");
+                System.out.println(p);
+                switch (player) {
+                    case "paper" -> System.out.println("Game drow\n");
+                    case "scissors" -> System.out.println("Player win!\n");
+                    case "rock" -> System.out.println("Computer win!\n");
                 }
             } else if(random>0.3 && random<=0.6) {
                 System.out.println(r);
+                switch (player) {
+                    case "rock" -> System.out.println("Game drow\n");
+                    case "paper" -> System.out.println("Player win!\n");
+                    case "scissors" -> System.out.println("Computer win!\n");
+                }
             } else {
                 System.out.println(s);
+                switch (player) {
+                    case "scissors" -> System.out.println("Game drow\n");
+                    case "rock" -> System.out.println("Player win!\n");
+                    case "paper" -> System.out.println("Computer win!\n");
+                }
             }
             if(player.equals("exit")) {
                 break;
